@@ -1,0 +1,63 @@
+aside.sidebar{
+    grid-column: sidebar-start/sidebar-end;
+    grid-row: 2/-1;
+    background-color: transparent;
+
+
+    .navbar{
+        padding: 0rem 2rem;
+         @include link;
+         li a:link,
+         li a:visited{
+            color:$color-grey-3;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1rem;
+
+            &:hover,
+            &:active{
+                background-color: $color-grey-6;
+            }
+
+            & span.icon {
+                margin-right: 1rem;
+            }
+        }
+
+        li a.active{
+            background-color: $color-grey-6 
+        }
+
+        .components{
+            @include link;
+            li a:link,
+            li a:visited{
+            color:$color-grey-3;
+            padding: 1rem 2rem;
+
+            &:hover,
+            &:active{
+                    color: $color-black;
+                    background-color: none;
+                }
+
+            }
+        }
+
+        .used{
+            li a:link,
+            li a:visited{
+            &:hover,
+            &:active{
+                    color: $color-black;
+                    background: none;
+                    text-decoration: underline;
+                }
+
+            }
+        }
+    }
+
+    @include respond(tablet-land){
+        display: none;
+    }
+}

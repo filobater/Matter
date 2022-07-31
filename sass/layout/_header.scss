@@ -1,0 +1,199 @@
+header.head{
+    grid-column: 1/-1;
+    background: $color-blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.15rem 3rem;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2),0 4px 5px 0 rgba(0,0,0,.14),
+    0 1px 10px 0 rgba(0,0,0,.12);
+
+    @include respond(tablet-land){
+        padding: 1.15rem 1.75rem;
+    }
+
+    .logo{
+        display: flex;
+        align-items: center;
+        color: $color-white;
+
+        .icon-bar:link,
+        .icon-bar:visited{
+            font-size: 1.75rem;
+            margin-right: 1rem;
+            color:$color-white;
+            background-color: transparent;
+            padding: .7rem 1rem;
+            transition: all .3s;
+            border-radius: 50%;
+            display: inline-block;
+
+            @include respond(tablet-land){
+                font-size: 1.5rem;
+            }
+            
+
+            &:hover,
+            &:active{
+                background-color: rgba(0,0,0,.05);
+                border-radius: 50%;
+            }
+        }
+
+        .head-logo{
+            font-weight: 300;
+            font-size: 1.93rem;
+
+            @include respond(tablet-land){
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    .search{
+        flex-basis: 58%;
+        max-width: 58%;
+        @include respond(tablet-land){
+            flex-basis: 50%;
+            max-width: 50%;
+        }
+
+        @include respond(tablet-port){
+            display: none;
+        }
+
+        .form-group{
+            display: flex;
+            
+
+            .form-control{
+                flex-basis: 85%;
+                max-width: 85%;
+                background-color: rgba(255, 255, 255, 0.25);
+                padding: 1rem 2rem;
+                border: none;
+                border-radius: 2px;
+                color: $color-white;
+                font-size: 1.4rem;
+                outline: none;
+
+                @include respond(tablet-land){
+                    flex-basis: 100%;
+                    max-width: 100%;
+                }
+
+                &::placeholder{
+                    color: $color-white;
+                    opacity: 1;
+                }
+
+                &:focus{
+                    box-shadow: 0 0 0 2px hsla(0,0%,100%,.4)
+                }
+
+                
+            }
+        }
+    }
+
+    .control{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .setting{
+            position: relative;
+            .hide{
+                display: none;
+            }
+
+            @include dropdown;                                  
+                                                                                           
+        }
+
+
+        .notification{
+            position: relative;
+            .icon-not:link,
+            .icon-not:visited{
+                color: #ff1744;
+                position: absolute;
+                top: -.6rem;
+                left: 1.6rem;
+            }
+
+            .hide-2{
+                display:none;
+            }
+
+            @include dropdown;
+
+            .dropdown{
+                min-width: 28rem;
+                li a{
+                    font-weight: 500;
+
+                    .icon{
+                        color:$color-white;
+                        padding: 1rem;
+                        border-radius: 50%;
+                        display: flex;
+                        margin-right: 1rem;
+                    }
+                }
+
+                li a .icon-message{
+                    background-color: $color-blue;}
+                li a .icon-cloud{
+                    background-color: #ffc107;}
+                li a .icon-cam{
+                    background-color: $color-grey; }
+                li a .icon-pen{
+                    background-color: $color-red;}
+            }
+
+        }
+
+
+        
+
+        .icon-cont:link,
+        .icon-cont:visited{
+            color:$color-white;
+            font-size: 1.6rem;
+            background-color: transparent;
+            padding: .7rem 1rem;
+            transition: all .3s;
+            border-radius: 50%;
+            
+
+            &:hover,
+            &:active{
+                background-color: rgba(0,0,0,.05);
+                border-radius: 50%;
+            }
+        }
+
+        .profile{
+            flex-basis: 20%;
+            max-width: 20%;
+            .img-prof{
+                border-radius: 50%;
+                margin-left: 1rem;
+                cursor: pointer;
+            }
+
+            .hide-3{
+                display: none;
+            }
+
+            @include dropdown;
+
+            .dropdown{
+                top: 6rem;
+                right: 6rem;
+            }
+        }
+    }
+}
+
